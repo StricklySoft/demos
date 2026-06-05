@@ -351,6 +351,14 @@
           <div><label for="email">Email</label><input type="email" id="email" name="email" required></div>
           <div><label for="phone">Phone</label><input type="tel" id="phone" name="phone" required></div>
         </div>
+        <label for="trailer">Trailer Type</label>
+        <select id="trailer" name="trailer_type">
+          <option value="">Not sure yet — help me choose</option>
+          <option>2-Station Restroom Trailer</option>
+          <option>4-Station Restroom Trailer</option>
+          <option>8-Station Large Event Trailer</option>
+          <option>ADA-Accessible Restroom Trailer</option>
+        </select>
         <label for="usefor">What's it for?</label>
         <select id="usefor" name="use_for">
           <option>Construction / Job Site</option>
@@ -423,7 +431,7 @@
       <div class="m-head"><h3 id="m-name"></h3><span class="m-price" id="m-price"></span></div>
       <p id="m-desc"></p>
       <ul id="m-specs"></ul>
-      <a href="#rent" class="btn" onclick="closeUnit()">Request to Rent This Trailer</a>
+      <a href="#rent" class="btn" onclick="requestUnit()">Request to Rent This Trailer</a>
     </div>
   </div>
 </div>
@@ -450,8 +458,10 @@ var UNITS = {
     specs:['Wheelchair-accessible entry','ADA-compliant layout','Grab bars &amp; low threshold','Climate controlled','Private &amp; secure','Cleaned &amp; restocked weekly']}
 };
 
+var currentUnitName = '';
 function openUnit(key){
   var u = UNITS[key];
+  currentUnitName = u.name;
   document.getElementById('m-name').innerHTML = u.name;
   document.getElementById('m-price').innerHTML = u.price;
   document.getElementById('m-desc').innerHTML = u.desc;
@@ -473,6 +483,11 @@ function setMain(i){
 function closeUnit(){
   document.getElementById('modal').classList.remove('open');
   document.body.style.overflow='';
+}
+function requestUnit(){
+  var sel = document.getElementById('trailer');
+  if(sel && currentUnitName) sel.value = currentUnitName;
+  closeUnit();
 }
 document.addEventListener('keydown',function(e){ if(e.key==='Escape') closeUnit(); });
 </script>
