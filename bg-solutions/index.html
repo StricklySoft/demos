@@ -49,8 +49,8 @@
  .nav{display:flex;align-items:center;justify-content:space-between;padding:12px 22px;max-width:1140px;margin:0 auto}
  .nav img{height:80px;width:auto}
  @media(max-width:600px){.nav img{height:60px}}
- .nav-links{display:flex;align-items:center;gap:26px}
- .nav-links a{color:var(--ink);font-weight:600;font-size:.95rem}
+ .nav-links{display:flex;align-items:center;gap:22px;flex-wrap:nowrap}
+ .nav-links a{color:var(--ink);font-weight:600;font-size:.95rem;white-space:nowrap}
  .nav-links a:hover{color:var(--steel)}
  .nav-phone{color:var(--navy);font-weight:800}
  .nav .btn{padding:11px 20px}
@@ -65,7 +65,18 @@
  .mobnav a:hover{color:var(--steel)}
  .mobnav a.callrow{color:var(--navy);font-weight:800}
  .mobnav a.btn{color:#fff;text-align:center;border-bottom:0;margin-top:12px}
- @media(max-width:880px){ .nav-links{display:none} .hamburger{display:flex} }
+ .nav-call{display:none;width:42px;height:42px;border-radius:50%;background:var(--navy);color:#fff;align-items:center;justify-content:center;text-decoration:none;flex:0 0 auto}
+ .nav-call:hover{background:var(--steel)}
+ .nav-call svg{width:20px;height:20px;fill:currentColor}
+ /* Below 1000px the full link row no longer fits, so collapse the SECTION links
+    into the hamburger — but keep the money actions (call + Request) visible. */
+ @media(max-width:1000px){
+   .nav-links a:not(.btn):not(.nav-phone):not(.nav-call){display:none}
+   .nav-phone{display:none}
+   .nav-call{display:inline-flex;align-items:center}
+   .hamburger{display:flex}
+ }
+ @media(max-width:600px){ .nav .btn{padding:10px 16px;font-size:.92rem} }
 
  .hero{background:linear-gradient(160deg,var(--navy) 0%,var(--navy-dk) 100%);color:#fff;position:relative;overflow:hidden}
  .hero:before{content:"";position:absolute;right:-160px;top:-120px;width:520px;height:520px;border-radius:50%;background:radial-gradient(circle,rgba(111,140,187,.28),transparent 70%)}
@@ -235,6 +246,7 @@
       <a href="#how">How It Works</a>
       <a href="#faq">FAQ</a>
       <a href="tel:5555550142" class="nav-phone">(555) 555-0142</a>
+      <a href="tel:5555550142" class="nav-call" aria-label="Call us"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 10.8c1.4 2.8 3.8 5.2 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.4.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.4 0 .8-.2 1l-2.3 2.2z"/></svg></a>
       <a href="#rent" class="btn">Request to Rent</a>
     </nav>
     <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false" onclick="toggleNav()"><span></span><span></span><span></span></button>
@@ -245,8 +257,6 @@
     <a href="#applications" onclick="closeNav()">Applications</a>
     <a href="#how" onclick="closeNav()">How It Works</a>
     <a href="#faq" onclick="closeNav()">FAQ</a>
-    <a href="tel:5555550142" class="callrow" onclick="closeNav()">📞 (555) 555-0142</a>
-    <a href="#rent" class="btn" onclick="closeNav()">Request to Rent</a>
   </div>
 </header>
 
