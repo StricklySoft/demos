@@ -8,19 +8,19 @@
   <meta name="keywords" content="lawn care, lawn mowing, leaf removal, yard cleanup, landscaping, High Point NC, Triad" />
   <meta name="author" content="Nooe Lawn Care" />
   <meta name="robots" content="index, follow" />
-  <link rel="canonical" href="https://stricklysoft.github.io/demos/nooe-lawncare/" />
+  <link rel="canonical" href="https://nooe-lawncare.pages.dev/" />
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="Nooe Lawn Care" />
   <meta property="og:title" content="Nooe Lawn Care — Lawn Care &amp; Mowing in High Point, NC" />
   <meta property="og:description" content="Nooe Lawn Care — dependable lawn mowing, leaf removal, and yard cleanups in High Point, NC and the Triad. Free quotes — call (336) 479-5336." />
-  <meta property="og:url" content="https://stricklysoft.github.io/demos/nooe-lawncare/" />
-  <meta property="og:image" content="https://stricklysoft.github.io/demos/nooe-lawncare/hero.jpg" />
+  <meta property="og:url" content="https://nooe-lawncare.pages.dev/" />
+  <meta property="og:image" content="https://nooe-lawncare.pages.dev/hero.jpg" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Nooe Lawn Care — Lawn Care &amp; Mowing in High Point, NC" />
   <meta name="twitter:description" content="Nooe Lawn Care — dependable lawn mowing, leaf removal, and yard cleanups in High Point, NC and the Triad. Free quotes — call (336) 479-5336." />
-  <meta name="twitter:image" content="https://stricklysoft.github.io/demos/nooe-lawncare/hero.jpg" />
+  <meta name="twitter:image" content="https://nooe-lawncare.pages.dev/hero.jpg" />
   <script type="application/ld+json">
-  {"@context":"https://schema.org","@type":"LocalBusiness","name":"Nooe Lawn Care","description":"Nooe Lawn Care — dependable lawn mowing, leaf removal, and yard cleanups in High Point, NC and the Triad. Free quotes — call (336) 479-5336.","url":"https://stricklysoft.github.io/demos/nooe-lawncare/","telephone":"(336) 479-5336","areaServed":"High Point, NC and the Triad","image":"https://stricklysoft.github.io/demos/nooe-lawncare/hero.jpg"}
+  {"@context":"https://schema.org","@type":"LocalBusiness","name":"Nooe Lawn Care","description":"Nooe Lawn Care — dependable lawn mowing, leaf removal, and yard cleanups in High Point, NC and the Triad. Free quotes — call (336) 479-5336.","url":"https://nooe-lawncare.pages.dev/","telephone":"(336) 479-5336","areaServed":"High Point, NC and the Triad","image":"https://nooe-lawncare.pages.dev/hero.jpg"}
   </script>
 <style>
   :root{
@@ -174,11 +174,10 @@
     <div class="qcard" id="quote">
       <h3>Get Your Free Quote</h3>
       <p class="sub">Tell us about your yard — Nooe Lawn Care replies the same day.</p>
-      <!-- Web3Forms: paste a free key from web3forms.com tied to the owner's email -->
-      <form action="https://api.web3forms.com/submit" method="POST">
-        <input type="hidden" name="access_key" value="[WEB3FORMS-ACCESS-KEY]" />
-        <input type="hidden" name="subject" value="New Quote Request from Nooe Lawn Care Lawncare website" />
-        <input type="checkbox" name="botcheck" style="display:none" />
+      <!-- Formspree: create a form in the StricklySoft dashboard, paste its endpoint below -->
+      <form action="https://forms.stricklysoft.workers.dev/demo" method="POST">
+        <input type="hidden" name="_subject" value="New Quote Request from Nooe Lawn Care website" />
+        <input type="text" name="_gotcha" style="display:none" />
         <label>Name</label>
         <input type="text" name="name" placeholder="Your name" required />
         <label>Phone</label>
@@ -279,5 +278,45 @@
   </div>
 </footer>
 
+<!-- StricklySoft contact-form thank-you popup (baked in) -->
+<div id="ty-modal" role="dialog" aria-modal="true" aria-label="Message sent" style="display:none;position:fixed;inset:0;z-index:2000;background:rgba(16,24,32,.55);align-items:center;justify-content:center;padding:20px;">
+  <div style="background:#fff;border-radius:14px;max-width:420px;width:100%;overflow:hidden;text-align:center;position:relative;box-shadow:0 24px 70px rgba(0,0,0,.28);">
+    <div style="height:7px;background:#1f7a3d;"></div>
+    <button type="button" id="ty-close" aria-label="Close" style="position:absolute;top:8px;right:13px;border:0;background:none;font-size:28px;line-height:1;color:#9aa4b0;cursor:pointer;">&times;</button>
+    <div style="padding:34px 28px 30px;">
+      <svg width="56" height="56" viewBox="0 0 24 24" fill="none" stroke="#1f7a3d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10" opacity="0.28"/><path d="M7.5 12.5l3 3 6-6.5"/></svg>
+      <h3 style="margin:14px 0 6px;color:#16202e;font-family:inherit;">Thank you!</h3>
+      <p style="margin:0 0 20px;color:#5a6776;line-height:1.55;font-family:inherit;">Your message has been sent &mdash; we'll be in touch shortly.</p>
+      <button type="button" id="ty-ok" style="background:#1f2a37;color:#fff;border:0;border-radius:9px;padding:12px 30px;font-size:1rem;font-weight:700;cursor:pointer;">Close</button>
+    </div>
+  </div>
+</div>
+<script>
+/* AJAX submit -> closeable thank-you popup (no navigation). Native-post + worker
+   /thanks page is the no-JS fallback. Attaches to any form posting to the Worker. */
+(function(){
+  var modal=document.getElementById('ty-modal'); if(!modal)return;
+  function open(){modal.style.display='flex';} function close(){modal.style.display='none';}
+  var x=document.getElementById('ty-close'),ok=document.getElementById('ty-ok');
+  if(x)x.addEventListener('click',close); if(ok)ok.addEventListener('click',close);
+  modal.addEventListener('click',function(e){if(e.target===modal)close();});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape'&&modal.style.display==='flex')close();});
+  document.querySelectorAll('form[action*="forms.stricklysoft.workers.dev"]').forEach(function(form){
+    form.addEventListener('submit',function(e){
+      e.preventDefault();
+      var hp=form.querySelector('[name=_gotcha],[name=botcheck]');
+      if(hp){var f=(hp.type==='checkbox')?hp.checked:!!hp.value; if(f)return;}
+      var btn=form.querySelector('button'); var label=btn?btn.textContent:'';
+      if(btn){btn.disabled=true;btn.textContent='Sending\u2026';}
+      fetch(form.action,{method:'POST',headers:{'Accept':'application/json'},body:new FormData(form)})
+        .then(function(r){if(!r.ok)throw r;return r.json();})
+        .then(function(){form.reset();if(btn){btn.disabled=false;btn.textContent=label;}open();})
+        .catch(function(){if(btn){btn.disabled=false;btn.textContent=label;}
+          var m=form.querySelector('.ty-err'); if(!m){m=document.createElement('div');m.className='ty-err';m.style.cssText='color:#c0392b;font-size:.85rem;margin-top:8px;';form.appendChild(m);}
+          m.textContent='Something went wrong \u2014 please try again or call us.';});
+    });
+  });
+})();
+</script>
 </body>
 </html>

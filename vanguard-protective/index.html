@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Vanguard Protective Services | Licensed Security Guards & Patrol — Triad, NC</title>
+<meta name="description" content="Vanguard Protective Services provides licensed, insured uniformed security guards, mobile patrol, event security and executive protection across High Point, Greensboro, Winston-Salem and the Triad. 24/7 dispatch. Free security assessment." />
+<meta name="theme-color" content="#0a140e" />
+<link rel="canonical" href="https://vanguard-protective.pages.dev/" />
+
+<!-- Open Graph -->
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Vanguard Protective Services — Licensed Security, Triad NC" />
+<meta property="og:description" content="Trained, vetted, state-licensed security officers. 24/7 dispatch and real-time patrol reporting. Serving the Triad." />
+<meta property="og:url" content="https://vanguard-protective.pages.dev/" />
+
+<!-- self-hosted variable font + LCP preloads (no third-party, no render-block) -->
+<link rel="preload" as="font" type="font/woff2" href="/assets/fonts/oswald.woff2" crossorigin />
+<link rel="preload" as="image" href="/assets/camera.webp" type="image/webp" media="(min-width:881px)" />
+<link rel="preload" as="image" href="/assets/camera-sm.webp" type="image/webp" media="(max-width:880px)" />
+
+<!-- Favicon: gold shield -->
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M16 2 4 7v9c0 7 5.2 11.7 12 14 6.8-2.3 12-7 12-14V7L16 2z' fill='%230e1d14' stroke='%23cdd5e0' stroke-width='2'/%3E%3Cpath d='M16 9l1.9 4 4.4.4-3.3 2.9 1 4.3L16 22.3 12 22.5l1-4.3-3.3-2.9 4.4-.4L16 9z' fill='%23cdd5e0'/%3E%3C/svg%3E" />
+
+<style>
+  :root{
+    --navy:#0a140e; --navy-2:#0e1d14; --panel:#122a1c; --panel-2:#163522;
+    --line:rgba(255,255,255,.09); --line-2:rgba(255,255,255,.15);
+    --ink:#eef4ee; --muted:#a6bdaf; --muted-2:#82a08d;
+    --gold:#34a06a; --gold-2:#54c488; --gold-soft:rgba(52,160,106,.15);
+    --silver:#cdd5e0; --silver-2:#eef1f5; --silver-soft:rgba(205,213,224,.14);
+    --shadow:0 24px 60px -20px rgba(0,0,0,.7);
+    --radius:16px;
+    --maxw:1180px;
+  }
+  @font-face{font-family:'Oswald';font-style:normal;font-weight:400 700;font-display:swap;src:url('/assets/fonts/oswald.woff2') format('woff2')}
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:system-ui,-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;
+    background:var(--navy); color:var(--ink);
+    line-height:1.6; -webkit-font-smoothing:antialiased;
+    overflow-x:hidden;
+  }
+  h1,h2,h3,h4,.display{font-family:'Oswald',sans-serif;font-weight:600;line-height:1.05;letter-spacing:.5px}
+  a{color:inherit;text-decoration:none}
+  img{max-width:100%;display:block}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px}
+  .eyebrow{
+    font-family:inherit;font-weight:600;font-size:12px;letter-spacing:3px;
+    text-transform:uppercase;color:var(--gold);display:inline-flex;align-items:center;gap:10px;
+  }
+  .eyebrow::before{content:"";width:26px;height:2px;background:var(--gold);display:inline-block}
+  .btn{
+    display:inline-flex;align-items:center;gap:9px;font-weight:600;font-size:15px;
+    padding:14px 26px;border-radius:10px;cursor:pointer;border:1px solid transparent;
+    transition:transform .15s ease, box-shadow .2s ease, background .2s ease;white-space:nowrap;
+  }
+  .btn-gold{background:linear-gradient(180deg,var(--gold-2),var(--gold));color:#06140d;box-shadow:0 10px 30px -10px rgba(52,160,106,.6)}
+  .btn-gold:hover{transform:translateY(-2px);box-shadow:0 16px 40px -10px rgba(52,160,106,.7)}
+  .btn-ghost{background:rgba(255,255,255,.04);border-color:var(--line-2);color:var(--ink)}
+  .btn-ghost:hover{background:rgba(255,255,255,.09);transform:translateY(-2px)}
+  section{position:relative}
+  .section-pad{padding:104px 0}
+  .center{text-align:center}
+  .lead{color:var(--muted);font-size:18px;max-width:640px}
+  .center .lead{margin-left:auto;margin-right:auto}
+
+  /* reveal */
+  .reveal{opacity:0;transform:translateY(26px);transition:opacity .7s ease, transform .7s ease}
+  .reveal.in{opacity:1;transform:none}
+
+  /* ---------- NAV ---------- */
+  header.nav{position:sticky;top:0;z-index:60;
+    background:rgba(10,20,14,.92);border-bottom:1px solid var(--line);transition:background .3s}
+  .nav-inner{display:flex;align-items:center;justify-content:space-between;height:74px}
+  .brand{display:flex;align-items:center;gap:12px;font-family:'Oswald';font-weight:700;font-size:20px;letter-spacing:1px;text-transform:uppercase}
+  .brand .mark{width:34px;height:34px;flex:none}
+  .brand b{color:var(--gold);font-weight:700}
+  .nav-links{display:flex;align-items:center;gap:30px}
+  .nav-links a{font-size:14.5px;font-weight:500;color:var(--muted);transition:color .2s}
+  .nav-links a:hover{color:var(--ink)}
+  .nav-cta{display:flex;align-items:center;gap:18px}
+  .nav-phone{font-family:'Oswald';font-size:18px;letter-spacing:.5px;color:var(--ink);display:flex;align-items:center;gap:8px}
+  .nav-phone svg{color:var(--gold)}
+  .burger{display:none;background:none;border:0;color:var(--ink);cursor:pointer;padding:6px}
+  @media(max-width:940px){
+    .nav-links,.nav-cta .btn,.nav-phone span{display:none}
+    .burger{display:block}
+  }
+  /* mobile menu */
+  .mobile{position:fixed;inset:74px 0 auto 0;background:var(--navy-2);border-bottom:1px solid var(--line);
+    transform:translateY(-120%);transition:transform .35s ease;z-index:55;padding:18px 24px 26px}
+  .mobile.open{transform:translateY(0)}
+  .mobile a{display:block;padding:14px 0;border-bottom:1px solid var(--line);color:var(--ink);font-weight:500}
+  .mobile .btn{width:100%;justify-content:center;margin-top:18px}
+
+  /* ---------- HERO ---------- */
+  .hero{position:relative;padding:90px 0 96px;overflow:hidden}
+  .hero-bg{position:absolute;inset:0;z-index:0;
+    background:
+      radial-gradient(900px 500px at 78% -8%, rgba(52,160,106,.18), transparent 60%),
+      radial-gradient(700px 600px at 0% 100%, rgba(40,80,140,.22), transparent 55%),
+      linear-gradient(180deg,var(--navy),var(--navy-2));
+  }
+  .grid-overlay{position:absolute;inset:0;z-index:1;opacity:.5;
+    background-image:linear-gradient(var(--line) 1px,transparent 1px),linear-gradient(90deg,var(--line) 1px,transparent 1px);
+    background-size:54px 54px;
+    mask-image:radial-gradient(circle at 70% 25%,#000,transparent 72%);
+    -webkit-mask-image:radial-gradient(circle at 70% 25%,#000,transparent 72%);
+  }
+  /* real surveillance camera photo — subdued, green-tinted, blended into the right of the hero */
+  /* green tint + left fade baked into background (no filter/mask — cheap to paint) */
+  .hero-photo{position:absolute;inset:0;z-index:0;pointer-events:none;opacity:.9;
+    background-repeat:no-repeat;background-position:right center;background-size:cover;
+    background-image:linear-gradient(90deg,var(--navy) 14%,rgba(11,24,16,.58) 44%,rgba(28,70,46,.42) 100%),url('/assets/camera.jpg');
+    background-image:linear-gradient(90deg,var(--navy) 14%,rgba(11,24,16,.58) 44%,rgba(28,70,46,.42) 100%),-webkit-image-set(url('/assets/camera.webp') type('image/webp'),url('/assets/camera.jpg') type('image/jpeg'));
+    background-image:linear-gradient(90deg,var(--navy) 14%,rgba(11,24,16,.58) 44%,rgba(28,70,46,.42) 100%),image-set(url('/assets/camera.webp') type('image/webp'),url('/assets/camera.jpg') type('image/jpeg'));
+  }
+  @media(max-width:880px){.hero-photo{opacity:.7;background-position:center;
+    background-image:linear-gradient(180deg,rgba(11,24,16,.25),var(--navy) 80%),image-set(url('/assets/camera-sm.webp') type('image/webp'),url('/assets/camera.jpg') type('image/jpeg'))}}
+  .hero-grid{position:relative;z-index:2;display:grid;grid-template-columns:1.1fr .9fr;gap:54px;align-items:center}
+  .hero h1{font-size:clamp(40px,6vw,68px);margin:20px 0 0;text-transform:uppercase}
+  .hero h1 span{color:var(--gold)}
+  .hero p.lead{margin:22px 0 32px}
+  .hero-cta{display:flex;gap:14px;flex-wrap:wrap}
+  .hero-trust{display:flex;gap:26px;margin-top:38px;flex-wrap:wrap}
+  .hero-trust .t{display:flex;align-items:center;gap:9px;color:var(--muted);font-size:14px;font-weight:500}
+  .hero-trust svg{color:var(--gold);flex:none}
+
+  /* hero card */
+  .shield-card{position:relative;background:linear-gradient(180deg,var(--panel),var(--panel-2));
+    border:1px solid var(--line-2);border-radius:20px;padding:30px;box-shadow:var(--shadow)}
+  .shield-card::before{content:"";position:absolute;inset:0;border-radius:20px;padding:1px;
+    background:linear-gradient(180deg,rgba(205,213,224,.6),transparent 40%);
+    -webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);
+    -webkit-mask-composite:xor;mask-composite:exclude;pointer-events:none}
+  .sc-top{display:flex;align-items:center;gap:14px;padding-bottom:18px;border-bottom:1px solid var(--line)}
+  .sc-badge{width:48px;height:48px;flex:none}
+  .sc-top h4{font-size:19px;letter-spacing:.5px}
+  .sc-top small{color:var(--gold);font-weight:600;font-size:12px;letter-spacing:1.5px;text-transform:uppercase}
+  .sc-row{display:flex;align-items:center;justify-content:space-between;padding:15px 0;border-bottom:1px solid var(--line)}
+  .sc-row:last-child{border-bottom:0;padding-bottom:0}
+  .sc-row .l{display:flex;align-items:center;gap:12px;color:var(--muted);font-size:14.5px}
+  .sc-row .l svg{color:var(--gold)}
+  .sc-status{display:flex;align-items:center;gap:8px;font-size:13px;font-weight:600;color:#7ee2a8}
+  /* (removed unused .dot box-shadow pulse — non-composited) */
+
+  @media(max-width:880px){.hero-grid{grid-template-columns:1fr;gap:40px}.shield-card{order:-1}}
+
+  /* ---------- LOGO / TRUST STRIP ---------- */
+  .strip{border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:rgba(255,255,255,.015)}
+  .strip-inner{display:flex;align-items:center;justify-content:space-between;gap:28px;padding:26px 0;flex-wrap:wrap}
+  .strip-label{color:var(--muted-2);font-size:12.5px;letter-spacing:2px;text-transform:uppercase;font-weight:600}
+  .strip-items{display:flex;gap:34px;flex-wrap:wrap;align-items:center}
+  .strip-items span{font-family:'Oswald';font-size:16px;letter-spacing:1px;color:var(--muted);text-transform:uppercase;opacity:.85}
+
+  /* ---------- STATS ---------- */
+  .stats{display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
+  .stat{padding:30px 26px;background:linear-gradient(180deg,var(--panel),transparent);border:1px solid var(--line);border-radius:var(--radius)}
+  .stat .n{font-family:'Oswald';font-size:46px;color:var(--gold);line-height:1}
+  .stat .k{margin-top:8px;color:var(--muted);font-size:14.5px;font-weight:500}
+  @media(max-width:760px){.stats{grid-template-columns:repeat(2,1fr)}}
+
+  /* ---------- SERVICES ---------- */
+  .head{max-width:680px;margin-bottom:54px}
+  .head h2{font-size:clamp(30px,4.4vw,46px);margin:16px 0 14px;text-transform:uppercase}
+  .center.head{margin-left:auto;margin-right:auto}
+  .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+  .card{position:relative;background:linear-gradient(180deg,var(--panel),var(--navy-2));border:1px solid var(--line);
+    border-radius:var(--radius);padding:30px;transition:transform .25s ease,border-color .25s ease,box-shadow .25s ease}
+  .card:hover{transform:translateY(-6px);border-color:rgba(52,160,106,.55);box-shadow:var(--shadow)}
+  .card .ico{width:54px;height:54px;border-radius:12px;display:grid;place-items:center;margin-bottom:20px;
+    background:var(--gold-soft);border:1px solid rgba(52,160,106,.3);color:var(--gold)}
+  .card h3{font-size:21px;letter-spacing:.5px;margin-bottom:10px;text-transform:uppercase}
+  .card p{color:var(--muted);font-size:15px}
+  .card .more{margin-top:16px;display:inline-flex;align-items:center;gap:7px;color:var(--gold);font-weight:600;font-size:14px}
+  @media(max-width:900px){.cards{grid-template-columns:repeat(2,1fr)}}
+  @media(max-width:600px){.cards{grid-template-columns:1fr}}
+
+  /* ---------- APPROACH ---------- */
+  .approach{background:linear-gradient(180deg,var(--navy-2),var(--navy))}
+  .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:22px;counter-reset:step}
+  .step{position:relative;padding:30px 24px;border:1px solid var(--line);border-radius:var(--radius);background:rgba(255,255,255,.015)}
+  .step::before{counter-increment:step;content:"0" counter(step);font-family:'Oswald';font-size:40px;color:rgba(52,160,106,.4);line-height:1}
+  .step h3{font-size:19px;margin:14px 0 8px;text-transform:uppercase}
+  .step p{color:var(--muted);font-size:14.5px}
+  @media(max-width:860px){.steps{grid-template-columns:repeat(2,1fr)}}
+  @media(max-width:480px){.steps{grid-template-columns:1fr}}
+
+  /* ---------- FEATURE SPLIT ---------- */
+  .split{display:grid;grid-template-columns:1fr 1fr;gap:54px;align-items:center}
+  .split ul{list-style:none;margin-top:26px;display:grid;gap:16px}
+  .split li{display:flex;gap:14px;align-items:flex-start}
+  .split li svg{color:var(--gold);flex:none;margin-top:3px}
+  .split li b{display:block;font-family:'Oswald';font-size:17px;letter-spacing:.5px;text-transform:uppercase;font-weight:500}
+  .split li span{color:var(--muted);font-size:14.5px}
+  .split-visual{position:relative;border-radius:20px;overflow:hidden;border:1px solid var(--line-2);
+    background:linear-gradient(160deg,var(--panel),var(--navy));min-height:420px;display:grid;place-items:center}
+  .split-visual .ring{position:absolute;width:520px;height:520px;border-radius:50%;border:1px solid rgba(205,213,224,.18)}
+  .split-visual .ring.r2{width:380px;height:380px;border-color:rgba(205,213,224,.28)}
+  .split-visual .ring.r3{width:240px;height:240px;border-color:rgba(205,213,224,.42)}
+  .split-visual .big-shield{width:120px;height:120px;z-index:2;filter:drop-shadow(0 10px 30px rgba(205,213,224,.32))}
+  .scan{position:absolute;left:0;right:0;top:0;height:120px;z-index:1;will-change:transform;
+    background:linear-gradient(180deg,transparent,rgba(205,213,224,.14),transparent);animation:scan 4.5s ease-in-out infinite}
+  @keyframes scan{0%,100%{transform:translateY(-130%)}50%{transform:translateY(420px)}}
+  @media(max-width:860px){.split{grid-template-columns:1fr;gap:36px}.split-visual{min-height:320px}}
+
+  /* ---------- SECTORS ---------- */
+  .sectors{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+  .sector{display:flex;align-items:center;gap:14px;padding:22px 24px;border:1px solid var(--line);border-radius:12px;
+    background:rgba(255,255,255,.015);transition:border-color .2s,background .2s}
+  .sector:hover{border-color:rgba(52,160,106,.55);background:var(--gold-soft)}
+  .sector svg{color:var(--gold);flex:none}
+  .sector b{font-family:'Oswald';font-size:17px;letter-spacing:.5px;text-transform:uppercase;font-weight:500}
+  @media(max-width:780px){.sectors{grid-template-columns:repeat(2,1fr)}}
+  @media(max-width:460px){.sectors{grid-template-columns:1fr}}
+
+  /* ---------- TESTIMONIALS ---------- */
+  .quotes{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+  .quote{padding:30px;border:1px solid var(--line);border-radius:var(--radius);background:linear-gradient(180deg,var(--panel),var(--navy-2))}
+  .stars{color:var(--silver);letter-spacing:3px;font-size:15px;margin-bottom:14px}
+  .quote p{font-size:15.5px;color:var(--ink);font-style:italic}
+  .quote .who{margin-top:18px;display:flex;align-items:center;gap:12px}
+  .quote .av{width:42px;height:42px;border-radius:50%;background:var(--gold-soft);border:1px solid rgba(52,160,106,.4);
+    color:var(--gold);display:grid;place-items:center;font-family:'Oswald';font-weight:600}
+  .quote .who b{font-size:15px;display:block}
+  .quote .who small{color:var(--muted-2);font-size:13px}
+  @media(max-width:880px){.quotes{grid-template-columns:1fr}}
+
+  /* ---------- CTA BAND ---------- */
+  .ctaband{position:relative;overflow:hidden;border-radius:24px;padding:64px 48px;text-align:center;
+    background:radial-gradient(700px 300px at 50% 0%,rgba(52,160,106,.22),transparent 60%),linear-gradient(180deg,var(--panel),var(--panel-2));
+    border:1px solid var(--line-2)}
+  .ctaband h2{font-size:clamp(28px,4vw,44px);text-transform:uppercase;margin-bottom:14px}
+  .ctaband p{color:var(--muted);max-width:560px;margin:0 auto 28px;font-size:17px}
+
+  /* ---------- CONTACT ---------- */
+  .contact-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:48px;align-items:start}
+  .contact-info h2{font-size:clamp(28px,4vw,44px);text-transform:uppercase;margin:16px 0 14px}
+  .contact-info .lead{margin-bottom:30px}
+  .ci-row{display:flex;align-items:center;gap:16px;padding:18px 0;border-top:1px solid var(--line)}
+  .ci-row:last-child{border-bottom:1px solid var(--line)}
+  .ci-ico{width:46px;height:46px;border-radius:11px;flex:none;display:grid;place-items:center;background:var(--gold-soft);border:1px solid rgba(52,160,106,.3);color:var(--gold)}
+  .ci-row small{display:block;color:var(--muted-2);font-size:12.5px;letter-spacing:1.5px;text-transform:uppercase}
+  .ci-row b{font-family:'Oswald';font-size:19px;letter-spacing:.5px;font-weight:500}
+  form{background:linear-gradient(180deg,var(--panel),var(--navy-2));border:1px solid var(--line-2);border-radius:20px;padding:32px}
+  .field{margin-bottom:18px}
+  .field label{display:block;font-size:13px;font-weight:600;color:var(--muted);margin-bottom:8px;letter-spacing:.5px}
+  .field input,.field select,.field textarea{width:100%;padding:14px 16px;background:var(--navy);border:1px solid var(--line-2);
+    border-radius:10px;color:var(--ink);font-family:inherit;font-size:15px;transition:border-color .2s,box-shadow .2s}
+  .field input:focus,.field select:focus,.field textarea:focus{outline:none;border-color:var(--gold);box-shadow:0 0 0 3px var(--gold-soft)}
+  .field textarea{resize:vertical;min-height:110px}
+  .field-2{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+  form .btn-gold{width:100%;justify-content:center;margin-top:6px;font-size:16px;padding:16px}
+  .form-note{text-align:center;color:var(--muted-2);font-size:13px;margin-top:14px}
+  .hp{position:absolute;left:-9999px;width:1px;height:1px;opacity:0}
+  @media(max-width:860px){.contact-grid{grid-template-columns:1fr;gap:36px}.field-2{grid-template-columns:1fr}}
+
+  /* ---------- FOOTER ---------- */
+  footer{border-top:1px solid var(--line);background:var(--navy-2);padding:56px 0 30px;margin-top:0}
+  .foot-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:40px;padding-bottom:36px;border-bottom:1px solid var(--line)}
+  .foot-grid p{color:var(--muted);font-size:14.5px;margin-top:16px;max-width:320px}
+  .foot-col h5{font-family:'Oswald';font-size:14px;letter-spacing:2px;text-transform:uppercase;color:var(--muted-2);margin-bottom:16px}
+  .foot-col a{display:block;color:var(--muted);font-size:14.5px;padding:6px 0;transition:color .2s}
+  .foot-col a:hover{color:var(--gold)}
+  .foot-bottom{display:flex;justify-content:space-between;align-items:center;gap:16px;padding-top:24px;flex-wrap:wrap}
+  .foot-bottom p{color:var(--muted-2);font-size:13.5px}
+  .lic{color:var(--muted-2);font-size:13px}
+  .lic b{color:var(--muted)}
+
+  /* ---------- THANK YOU MODAL ---------- */
+  .modal{position:fixed;inset:0;z-index:100;display:none;place-items:center;background:rgba(5,9,16,.78);backdrop-filter:blur(6px);padding:24px}
+  .modal.open{display:grid}
+  .modal-box{position:relative;max-width:440px;width:100%;text-align:center;padding:44px 36px;
+    background:linear-gradient(180deg,var(--panel),var(--panel-2));border:1px solid var(--line-2);border-radius:20px;box-shadow:var(--shadow)}
+  .modal-box .ok{width:70px;height:70px;margin:0 auto 20px;border-radius:50%;display:grid;place-items:center;
+    background:var(--gold-soft);border:1px solid rgba(52,160,106,.4);color:var(--gold)}
+  .modal-box h3{font-size:26px;text-transform:uppercase;margin-bottom:10px}
+  .modal-box p{color:var(--muted);font-size:15.5px;margin-bottom:24px}
+  .modal-close{position:absolute;top:14px;right:16px;background:none;border:0;color:var(--muted);font-size:26px;cursor:pointer;line-height:1}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<header class="nav">
+  <div class="wrap nav-inner">
+    <a href="#top" class="brand">
+      <svg class="mark" viewBox="0 0 32 32" fill="none"><path d="M16 2 4 7v9c0 7 5.2 11.7 12 14 6.8-2.3 12-7 12-14V7L16 2z" fill="#0e1d14" stroke="#cdd5e0" stroke-width="2"/><path d="M16 9l1.9 4 4.4.4-3.3 2.9 1 4.3L16 22.3 12 22.5l1-4.3-3.3-2.9 4.4-.4L16 9z" fill="#cdd5e0"/></svg>
+      Vanguard<b>.</b>
+    </a>
+    <nav class="nav-links">
+      <a href="#services">Services</a>
+      <a href="#approach">Our Approach</a>
+      <a href="#sectors">Industries</a>
+      <a href="#about">Why Vanguard</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <div class="nav-cta">
+      <a href="tel:+13365550199" class="nav-phone"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg><span>(336) 555-0199</span></a>
+      <a href="#contact" class="btn btn-gold">Free Assessment</a>
+    </div>
+    <button class="burger" aria-label="Menu" onclick="document.getElementById('m').classList.toggle('open')">
+      <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+    </button>
+  </div>
+</header>
+<div class="mobile" id="m">
+  <a href="#services" onclick="closeM()">Services</a>
+  <a href="#approach" onclick="closeM()">Our Approach</a>
+  <a href="#sectors" onclick="closeM()">Industries</a>
+  <a href="#about" onclick="closeM()">Why Vanguard</a>
+  <a href="#contact" onclick="closeM()">Contact</a>
+  <a href="#contact" class="btn btn-gold" onclick="closeM()">Request Free Assessment</a>
+</div>
+
+<!-- HERO -->
+<section class="hero" id="top">
+  <div class="hero-bg"></div>
+  <div class="hero-photo"></div>
+  <div class="grid-overlay"></div>
+  <div class="wrap hero-grid">
+    <div class="reveal in">
+      <span class="eyebrow">Licensed · Bonded · Insured</span>
+      <h1>Protection You Can <span>Count On.</span> Day and Night.</h1>
+      <p class="lead">Vanguard Protective Services provides trained, state-licensed security officers, mobile patrol, and executive protection across the Triad. Backed by 24/7 dispatch and real-time reporting — so you always know your people and property are covered.</p>
+      <div class="hero-cta">
+        <a href="#contact" class="btn btn-gold">Request a Free Security Assessment
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        <a href="#services" class="btn btn-ghost">View Our Services</a>
+      </div>
+      <div class="hero-trust">
+        <div class="t"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg> NC PPSB Licensed #XX-XXXX</div>
+        <div class="t"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> 24/7 Live Dispatch</div>
+        <div class="t"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg> Vetted & Background-Checked</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TRUST STRIP -->
+<div class="strip">
+  <div class="wrap strip-inner">
+    <span class="strip-label">Trusted to protect</span>
+    <div class="strip-items">
+      <span>Corporate Campuses</span>
+      <span>Retail Centers</span>
+      <span>Construction Sites</span>
+      <span>Healthcare</span>
+      <span>HOA &amp; Residential</span>
+      <span>Special Events</span>
+    </div>
+  </div>
+</div>
+
+<!-- STATS -->
+<section class="section-pad">
+  <div class="wrap">
+    <div class="stats">
+      <div class="stat reveal"><div class="n">24/7</div><div class="k">Live dispatch &amp; on-call supervision</div></div>
+      <div class="stat reveal"><div class="n">128+</div><div class="k">Licensed officers across the Triad</div></div>
+      <div class="stat reveal"><div class="n">&lt;15<span style="font-size:24px">min</span></div><div class="k">Average emergency response time</div></div>
+      <div class="stat reveal"><div class="n">15<span style="font-size:24px">yrs</span></div><div class="k">Protecting Triad people &amp; property</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="section-pad" id="services" style="padding-top:20px">
+  <div class="wrap">
+    <div class="head reveal">
+      <span class="eyebrow">What we do</span>
+      <h2>Complete Security Services, One Trusted Partner</h2>
+      <p class="lead">From a single uniformed officer to a fully managed protection program, every Vanguard service is staffed by vetted, trained professionals and backed by round-the-clock oversight.</p>
+    </div>
+    <div class="cards">
+      <div class="card reveal">
+        <div class="ico"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/></svg></div>
+        <h3>Uniformed Guards</h3>
+        <p>Professional armed and unarmed officers for commercial, industrial, and residential sites — a visible deterrent and a calm, capable presence on the ground.</p>
+        <span class="more">Learn more <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+      </div>
+      <div class="card reveal">
+        <div class="ico"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 3h15v13H1z"/><path d="M16 8h4l3 3v5h-7V8z"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg></div>
+        <h3>Mobile Patrol</h3>
+        <p>Marked patrol vehicles, randomized check rounds, and GPS-tracked, time-stamped reporting that proves every site was covered — without the cost of a static post.</p>
+        <span class="more">Learn more <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+      </div>
+      <div class="card reveal">
+        <div class="ico"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg></div>
+        <h3>Event Security</h3>
+        <p>Crowd management, access control, and bag checks for concerts, festivals, corporate functions, and private events — staffed and supervised end to end.</p>
+        <span class="more">Learn more <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+      </div>
+      <div class="card reveal">
+        <div class="ico"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></div>
+        <h3>Executive Protection</h3>
+        <p>Discreet close-protection details and secure transport for executives, public figures, and high-net-worth clients — planned, low-profile, and professional.</p>
+        <span class="more">Learn more <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+      </div>
+      <div class="card reveal">
+        <div class="ico"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 20h20"/><path d="M4 20V8l8-5 8 5v12"/><path d="M9 20v-6h6v6"/></svg></div>
+        <h3>Construction Site Security</h3>
+        <p>Stop equipment theft, copper loss, and trespassing with dedicated officers, access logging, and after-hours patrols tailored to active job sites.</p>
+        <span class="more">Learn more <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+      </div>
+      <div class="card reveal">
+        <div class="ico"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M23 7l-7 5 7 5V7z"/><rect x="1" y="5" width="15" height="14" rx="2"/></svg></div>
+        <h3>Surveillance &amp; Monitoring</h3>
+        <p>Live remote video monitoring and alarm response from our command center — eyes on your property 24/7, with rapid dispatch the moment something's wrong.</p>
+        <span class="more">Learn more <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- APPROACH -->
+<section class="section-pad approach" id="approach">
+  <div class="wrap">
+    <div class="head reveal">
+      <span class="eyebrow">How we work</span>
+      <h2>A Security Program Built Around You</h2>
+      <p class="lead">No cookie-cutter contracts. We assess your real risks, build a plan that fits your site and budget, and stay accountable with reporting you can actually see.</p>
+    </div>
+    <div class="steps">
+      <div class="step reveal"><h3>Assess</h3><p>A licensed supervisor walks your property, identifies vulnerabilities, and reviews your goals — at no cost or obligation.</p></div>
+      <div class="step reveal"><h3>Plan</h3><p>We design a tailored coverage plan: post orders, patrol schedules, escalation procedures, and transparent pricing.</p></div>
+      <div class="step reveal"><h3>Deploy</h3><p>Vetted, trained, and uniformed officers are matched to your site and briefed on your specific protocols before day one.</p></div>
+      <div class="step reveal"><h3>Report</h3><p>GPS-tracked patrols, time-stamped logs, and a dedicated account manager keep you informed and in control 24/7.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- FEATURE SPLIT / WHY -->
+<section class="section-pad" id="about">
+  <div class="wrap split">
+    <div class="reveal">
+      <span class="eyebrow">Why Vanguard</span>
+      <h2 style="font-size:clamp(30px,4.4vw,46px);text-transform:uppercase;margin:16px 0 8px">The Difference Is in the Standard We Hold</h2>
+      <p class="lead">Anyone can put a person in a uniform. We invest in the training, vetting, and oversight that turn an officer into genuine protection.</p>
+      <ul>
+        <li><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg><div><b>Rigorously Vetted Officers</b><span>Every officer passes a criminal background check, drug screening, and state licensing before they ever step on your site.</span></div></li>
+        <li><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg><div><b>24/7 Supervision &amp; Dispatch</b><span>Officers are never left unmanaged. Live supervisors and a real command center back every post around the clock.</span></div></li>
+        <li><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 3v18h18"/><path d="m19 9-5 5-4-4-3 3"/></svg><div><b>Reporting You Can See</b><span>GPS-verified patrols and digital incident reports delivered to your inbox — proof of service, not promises.</span></div></li>
+        <li><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 7h-9M14 17H5M17 3l3 4-3 4M7 13l-3 4 3 4"/></svg><div><b>Flexible, Local, Responsive</b><span>A Triad-based team that answers the phone, scales fast, and adapts coverage as your needs change.</span></div></li>
+      </ul>
+    </div>
+    <div class="split-visual reveal">
+      <div class="scan"></div>
+      <div class="ring"></div><div class="ring r2"></div><div class="ring r3"></div>
+      <svg class="big-shield" viewBox="0 0 32 32" fill="none"><path d="M16 2 4 7v9c0 7 5.2 11.7 12 14 6.8-2.3 12-7 12-14V7L16 2z" fill="#0e1d14" stroke="#cdd5e0" stroke-width="1.5"/><path d="M16 9l1.9 4 4.4.4-3.3 2.9 1 4.3L16 22.3 12 22.5l1-4.3-3.3-2.9 4.4-.4L16 9z" fill="#cdd5e0"/></svg>
+    </div>
+  </div>
+</section>
+
+<!-- SECTORS -->
+<section class="section-pad approach" id="sectors" style="padding-top:90px">
+  <div class="wrap">
+    <div class="head center reveal">
+      <span class="eyebrow" style="justify-content:center">Industries we serve</span>
+      <h2>Protection Tailored to Your Environment</h2>
+    </div>
+    <div class="sectors">
+      <div class="sector reveal"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 21h18M5 21V7l8-4v18M19 21V11l-6-4"/></svg><b>Corporate &amp; Office</b></div>
+      <div class="sector reveal"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l1-5h16l1 5M4 9v11h16V9M9 20v-6h6v6"/></svg><b>Retail &amp; Shopping</b></div>
+      <div class="sector reveal"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 20h20M4 20V8l8-5 8 5v12M9 20v-6h6v6"/></svg><b>Construction</b></div>
+      <div class="sector reveal"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M2 12h20"/><circle cx="12" cy="12" r="9"/></svg><b>Healthcare &amp; Medical</b></div>
+      <div class="sector reveal"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 21V9l9-6 9 6v12M9 21v-6h6v6"/></svg><b>HOA &amp; Residential</b></div>
+      <div class="sector reveal"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg><b>Events &amp; Venues</b></div>
+      <div class="sector reveal"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="3" width="15" height="13"/><path d="M16 8h4l3 3v5h-7z"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg><b>Warehouse &amp; Industrial</b></div>
+      <div class="sector reveal"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 7h-9M14 17H5"/><circle cx="17" cy="17" r="3"/><circle cx="7" cy="7" r="3"/></svg><b>Logistics &amp; Transport</b></div>
+      <div class="sector reveal"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2z"/><path d="M2 12h20M12 2a15 15 0 0 1 0 20M12 2a15 15 0 0 0 0 20"/></svg><b>Government &amp; Public</b></div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="section-pad">
+  <div class="wrap">
+    <div class="head center reveal">
+      <span class="eyebrow" style="justify-content:center">What clients say</span>
+      <h2>Reliability Our Clients Stake Their Sites On</h2>
+    </div>
+    <div class="quotes">
+      <div class="quote reveal">
+        <div class="stars">★★★★★</div>
+        <p>"Since Vanguard took over our property, theft on site has dropped to zero. Their patrol reports show up every morning like clockwork — I always know exactly what happened overnight."</p>
+        <div class="who"><div class="av">DR</div><div><b>David Reyes</b><small>Operations Mgr, Piedmont Logistics</small></div></div>
+      </div>
+      <div class="quote reveal">
+        <div class="stars">★★★★★</div>
+        <p>"We needed event coverage on short notice for a 2,000-person festival. Vanguard staffed it, supervised it, and made it look effortless. Professional from the first call."</p>
+        <div class="who"><div class="av">SK</div><div><b>Sarah Kline</b><small>Director, Triad Events Group</small></div></div>
+      </div>
+      <div class="quote reveal">
+        <div class="stars">★★★★★</div>
+        <p>"The difference is the people. Their officers are sharp, courteous, and clearly trained. Our residents feel safer, and our board finally stopped worrying about the front gate."</p>
+        <div class="who"><div class="av">MT</div><div><b>Michael Tran</b><small>HOA President, Oakmont Commons</small></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA BAND -->
+<section style="padding:0 0 104px">
+  <div class="wrap">
+    <div class="ctaband reveal">
+      <span class="eyebrow" style="justify-content:center">Ready when you are</span>
+      <h2>Let's Build Your Security Plan</h2>
+      <p>Schedule a free, no-obligation security assessment with a licensed Vanguard supervisor. We'll walk your site, identify the gaps, and recommend coverage that fits.</p>
+      <a href="#contact" class="btn btn-gold">Request a Free Assessment
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="section-pad" id="contact" style="padding-top:20px">
+  <div class="wrap contact-grid">
+    <div class="contact-info reveal">
+      <span class="eyebrow">Get in touch</span>
+      <h2>Talk to a Security Specialist</h2>
+      <p class="lead">Tell us about your site and your concerns. A Vanguard supervisor will follow up within one business day — often the same day.</p>
+      <div class="ci-row"><div class="ci-ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div><div><small>24/7 Dispatch Line</small><b>(336) 555-0199</b></div></div>
+      <div class="ci-row"><div class="ci-ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg></div><div><small>Email</small><b>dispatch@vanguardprotective.com</b></div></div>
+      <div class="ci-row"><div class="ci-ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div><div><small>Service Area</small><b>High Point · Greensboro · Winston-Salem &amp; the Triad</b></div></div>
+    </div>
+
+    <form id="leadForm" action="https://forms.stricklysoft.workers.dev/demo" method="POST">
+      <input type="hidden" name="_subject" value="New Security Inquiry — Vanguard Protective (demo)" />
+      <input type="text" name="_gotcha" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true" />
+      <div class="field-2">
+        <div class="field"><label for="name">Full Name</label><input id="name" name="name" type="text" placeholder="Jane Smith" required /></div>
+        <div class="field"><label for="phone">Phone</label><input id="phone" name="phone" type="tel" placeholder="(336) 555-0123" required /></div>
+      </div>
+      <div class="field-2">
+        <div class="field"><label for="email">Email</label><input id="email" name="email" type="email" placeholder="jane@company.com" required /></div>
+        <div class="field"><label for="service">Service Needed</label>
+          <select id="service" name="service">
+            <option>Uniformed Guards</option>
+            <option>Mobile Patrol</option>
+            <option>Event Security</option>
+            <option>Executive Protection</option>
+            <option>Construction Site Security</option>
+            <option>Surveillance &amp; Monitoring</option>
+            <option>Not sure — need guidance</option>
+          </select>
+        </div>
+      </div>
+      <div class="field"><label for="message">How can we help?</label><textarea id="message" name="message" placeholder="Tell us about your site, hours, and what you're trying to protect…"></textarea></div>
+      <button type="submit" class="btn btn-gold">Request My Free Assessment</button>
+      <p class="form-note">No obligation. Your information is kept confidential.</p>
+    </form>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <a href="#top" class="brand"><svg class="mark" viewBox="0 0 32 32" fill="none"><path d="M16 2 4 7v9c0 7 5.2 11.7 12 14 6.8-2.3 12-7 12-14V7L16 2z" fill="#0e1d14" stroke="#cdd5e0" stroke-width="2"/><path d="M16 9l1.9 4 4.4.4-3.3 2.9 1 4.3L16 22.3 12 22.5l1-4.3-3.3-2.9 4.4-.4L16 9z" fill="#cdd5e0"/></svg> Vanguard<b>.</b></a>
+        <p>Licensed, bonded, and insured security services protecting people, property, and peace of mind across the Triad — 24 hours a day, every day.</p>
+      </div>
+      <div class="foot-col">
+        <h5>Services</h5>
+        <a href="#services">Uniformed Guards</a>
+        <a href="#services">Mobile Patrol</a>
+        <a href="#services">Event Security</a>
+        <a href="#services">Executive Protection</a>
+        <a href="#services">Surveillance &amp; Monitoring</a>
+      </div>
+      <div class="foot-col">
+        <h5>Company</h5>
+        <a href="#about">Why Vanguard</a>
+        <a href="#approach">Our Approach</a>
+        <a href="#sectors">Industries</a>
+        <a href="#contact">Request Assessment</a>
+        <a href="/privacy.html">Privacy Policy</a>
+        <a href="/terms.html">Terms of Service</a>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <p>© 2026 Vanguard Protective Services, LLC. All rights reserved.</p>
+      <p class="lic"><b>NC PPSB License #XX-XXXX</b> · Bonded &amp; Insured</p>
+    </div>
+  </div>
+</footer>
+
+<!-- THANK YOU MODAL -->
+<div class="modal" id="thanks">
+  <div class="modal-box">
+    <button class="modal-close" onclick="closeThanks()" aria-label="Close">&times;</button>
+    <div class="ok"><svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg></div>
+    <h3>Request Received</h3>
+    <p>Thank you. A Vanguard security specialist will reach out within one business day to schedule your free assessment.</p>
+    <button class="btn btn-gold" style="width:100%;justify-content:center" onclick="closeThanks()">Close</button>
+  </div>
+</div>
+
+<script>
+  function closeM(){document.getElementById('m').classList.remove('open')}
+  function closeThanks(){document.getElementById('thanks').classList.remove('open')}
+
+  // scroll reveal
+  const io=new IntersectionObserver((es)=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.14});
+  document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+
+  // nav shadow on scroll
+  addEventListener('scroll',()=>{document.querySelector('.nav').style.background = scrollY>20?'rgba(11,18,32,.92)':'rgba(11,18,32,.72)'});
+
+  // AJAX form -> popup, with native fallback
+  const f=document.getElementById('leadForm');
+  f.addEventListener('submit',async(ev)=>{
+    ev.preventDefault();
+    const btn=f.querySelector('button[type=submit]');const orig=btn.innerHTML;
+    btn.disabled=true;btn.textContent='Sending…';
+    try{
+      const r=await fetch(f.action,{method:'POST',body:new FormData(f),headers:{'Accept':'application/json'}});
+      if(r.ok){f.reset();document.getElementById('thanks').classList.add('open');}
+      else{f.submit();}
+    }catch(_){f.submit();}
+    finally{btn.disabled=false;btn.innerHTML=orig;}
+  });
+</script>
+</body>
+</html>

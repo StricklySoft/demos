@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Cinnamon Bay Advisors, LLC — Strategic Cybersecurity Advisory</title>
+<meta name="description" content="Cinnamon Bay Advisors is a boutique strategic advisory firm for the cybersecurity ecosystem — connecting startups, venture capital, and consulting firms with the access, partnerships, and senior counsel that drive real growth." />
+<meta name="keywords" content="cybersecurity advisory, cybersecurity startups, venture capital cybersecurity, cybersecurity consulting, due diligence, deal flow, strategic partnerships, security advisory" />
+<meta name="author" content="Cinnamon Bay Advisors, LLC" />
+<meta name="robots" content="index, follow" />
+<link rel="canonical" href="https://cinnamon-bay-advisors.pages.dev/" />
+
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Cinnamon Bay Advisors, LLC" />
+<meta property="og:title" content="Cinnamon Bay Advisors, LLC — Strategic Cybersecurity Advisory" />
+<meta property="og:description" content="Strategic advisory for the cybersecurity ecosystem — connecting startups, venture capital, and consulting firms with access, partnerships, and senior counsel." />
+<meta property="og:url" content="https://cinnamon-bay-advisors.pages.dev/" />
+<meta property="og:image" content="https://cinnamon-bay-advisors.pages.dev/icon-512.png" />
+
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Cinnamon Bay Advisors, LLC — Strategic Cybersecurity Advisory" />
+<meta name="twitter:description" content="Strategic advisory for the cybersecurity ecosystem — startups, venture capital, and consulting firms." />
+
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="icon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="icon-16.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="manifest" href="site.webmanifest">
+<meta name="theme-color" content="#070b15">
+
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"ProfessionalService","name":"Cinnamon Bay Advisors, LLC","description":"Strategic advisory for the cybersecurity ecosystem — startups, venture capital, and consulting firms.","url":"https://cinnamon-bay-advisors.pages.dev/","areaServed":"US","serviceType":"Cybersecurity Advisory","knowsAbout":["Cybersecurity","Venture Capital","Due Diligence","Strategic Partnerships","Deal Flow"],"employee":[{"@type":"Person","name":"Dale Miller","jobTitle":"Founder & CEO"},{"@type":"Person","name":"Richard Toohey","jobTitle":"Director of Analytics & Quantum Technologies"},{"@type":"Person","name":"Geraldine Anello","jobTitle":"Director of Operations & Marketing"},{"@type":"Person","name":"Shannon B. Hill","jobTitle":"Director, Cybersecurity Solutions & Architecture"},{"@type":"Person","name":"Thomas Gilheany","jobTitle":"Director, Cybersecurity for AI & Emerging Tech"}]}
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+
+<style>
+  :root{
+    --bg:#070b15; --bg2:#0a1020; --panel:#0f1830; --panel2:#0c1426; --line:#1c2845; --line2:#28385d;
+    --text:#eaf0fb; --soft:#c2cde2; --muted:#8696b6; --faint:#5e6e90;
+    --acc:#2ee6c9; --acc2:#5b8cff; --acc-ink:#042521;
+    --shadow:0 24px 60px rgba(0,0,0,.45);
+    --r:16px; --maxw:1160px;
+    --grad:linear-gradient(120deg,var(--acc),var(--acc2));
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:'Inter',-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;color:var(--text);line-height:1.65;background:var(--bg);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+  img{max-width:100%;display:block}
+  a{color:inherit;text-decoration:none}
+  svg{display:block}
+  h1,h2,h3,.logo-t{font-family:'Space Grotesk','Inter',sans-serif;letter-spacing:-.02em}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 26px}
+  .eyebrow{color:var(--acc);font-weight:700;text-transform:uppercase;letter-spacing:2px;font-size:.76rem}
+  .btn{display:inline-flex;align-items:center;gap:8px;background:var(--acc);color:var(--acc-ink);font-weight:700;padding:14px 26px;border-radius:9px;font-size:.98rem;border:none;cursor:pointer;transition:transform .12s ease,box-shadow .25s ease}
+  .btn:hover{transform:translateY(-2px);box-shadow:0 10px 34px rgba(46,230,201,.34)}
+  .btn-ghost{background:transparent;color:var(--text);border:1px solid var(--line2)}
+  .btn-ghost:hover{border-color:var(--acc);box-shadow:none}
+
+  .reveal{opacity:0;transform:translateY(22px);transition:opacity .7s cubic-bezier(.22,.61,.36,1),transform .7s cubic-bezier(.22,.61,.36,1)}
+  .reveal.in{opacity:1;transform:none}
+
+  header{position:sticky;top:0;z-index:60;background:rgba(7,11,21,.72);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+  .bar{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:14px 26px;max-width:var(--maxw);margin:0 auto}
+  .logo{display:flex;align-items:center}
+  .logo img{height:44px;width:auto}
+  .nav-links{display:none;gap:32px;font-weight:500;font-size:.96rem;color:var(--soft)}
+  .nav-links a{position:relative;transition:color .2s}
+  .nav-links a:hover{color:var(--text)}
+  .nav-links a::after{content:"";position:absolute;left:0;bottom:-6px;width:0;height:2px;background:var(--grad);transition:width .25s}
+  .nav-links a:hover::after{width:100%}
+  .bar .btn{padding:11px 20px}
+  .menu-btn{display:flex;background:none;border:0;cursor:pointer;flex-direction:column;gap:5px;padding:8px}
+  .menu-btn span{width:24px;height:2px;background:var(--text);border-radius:2px;transition:.25s}
+  .menu-btn.x span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+  .menu-btn.x span:nth-child(2){opacity:0}
+  .menu-btn.x span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+  .mobnav{display:none;flex-direction:column;padding:8px 26px 20px;border-top:1px solid var(--line);background:rgba(7,11,21,.97)}
+  .mobnav.open{display:flex}
+  .mobnav a{padding:13px 0;color:var(--soft);font-weight:500;border-bottom:1px solid var(--line)}
+  .mobnav .btn{margin-top:14px;justify-content:center;color:var(--acc-ink);border-bottom:0}
+  @media(min-width:980px){.nav-links{display:flex}.menu-btn{display:none}}
+  @media(max-width:979px){.bar > .btn{display:none}}
+
+  .hero{position:relative;overflow:hidden;border-bottom:1px solid var(--line)}
+  .hero .circ{position:absolute;inset:0;background:url('img/circuit.webp') center/cover no-repeat;opacity:.12;mix-blend-mode:luminosity;
+    -webkit-mask-image:linear-gradient(105deg,#000 30%,transparent 78%);mask-image:linear-gradient(105deg,#000 30%,transparent 78%);pointer-events:none}
+  .hero::before{content:"";position:absolute;inset:0;z-index:1;pointer-events:none;background:
+    radial-gradient(1000px 560px at 80% -14%,rgba(91,140,255,.20),transparent 60%),
+    radial-gradient(760px 520px at 4% 116%,rgba(46,230,201,.15),transparent 60%)}
+  .hero::after{content:"";position:absolute;inset:0;z-index:1;opacity:.4;pointer-events:none;
+    background-image:linear-gradient(rgba(255,255,255,.04) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.04) 1px,transparent 1px);
+    background-size:52px 52px;-webkit-mask-image:radial-gradient(circle at 64% 28%,#000,transparent 76%);mask-image:radial-gradient(circle at 64% 28%,#000,transparent 76%)}
+  .hero .inner{position:relative;z-index:2;max-width:900px;padding:104px 26px 96px}
+  .pill{display:inline-flex;align-items:center;gap:9px;border:1px solid var(--line2);background:rgba(15,24,48,.6);border-radius:999px;padding:8px 17px;font-size:.82rem;font-weight:600;color:var(--soft);margin-bottom:28px}
+  .pill .dot{width:8px;height:8px;border-radius:50%;background:var(--acc);animation:pulse 2.4s infinite}
+  @keyframes pulse{0%{box-shadow:0 0 0 0 rgba(46,230,201,.55)}70%{box-shadow:0 0 0 9px rgba(46,230,201,0)}100%{box-shadow:0 0 0 0 rgba(46,230,201,0)}}
+  .hero h1{font-size:clamp(2.5rem,6vw,4.05rem);font-weight:700;line-height:1.05;margin-bottom:24px;color:#fff}
+  .hero h1 .g{background:var(--grad);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+  .hero .sub{font-size:clamp(1.02rem,1.7vw,1.18rem);color:var(--soft);max-width:680px;margin-bottom:34px}
+  .hero .cta{display:flex;gap:14px;flex-wrap:wrap}
+  .serves{display:flex;gap:26px;flex-wrap:wrap;margin-top:46px;padding-top:28px;border-top:1px solid var(--line);color:var(--muted);font-weight:600;font-size:.92rem}
+  .serves span{display:flex;align-items:center;gap:9px}
+  .serves svg{stroke:var(--acc)}
+
+  section{padding:96px 0}
+  .head{max-width:720px;margin:0 auto 56px;text-align:center}
+  .head h2{font-size:clamp(1.9rem,3.5vw,2.6rem);font-weight:700;margin:14px 0 14px;color:#fff}
+  .head p{color:var(--soft);font-size:1.08rem}
+
+  .grid{display:grid;gap:24px;grid-template-columns:repeat(auto-fit,minmax(290px,1fr))}
+  .card{background:linear-gradient(180deg,var(--panel),var(--panel2));border:1px solid var(--line);border-radius:var(--r);padding:34px;transition:border-color .25s,transform .2s,box-shadow .25s}
+  .card:hover{border-color:var(--line2);transform:translateY(-5px);box-shadow:var(--shadow)}
+  .card .ic{width:54px;height:54px;border-radius:13px;background:rgba(46,230,201,.1);border:1px solid rgba(46,230,201,.26);display:flex;align-items:center;justify-content:center;margin-bottom:20px}
+  .card h3{font-size:1.28rem;margin-bottom:11px;color:#fff}
+  .card p{color:var(--muted);font-size:.98rem}
+
+  .why{background:var(--bg2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .pgrid{display:grid;gap:24px;grid-template-columns:repeat(auto-fit,minmax(250px,1fr))}
+  .pillar{display:flex;gap:16px;align-items:flex-start;background:var(--panel2);border:1px solid var(--line);border-radius:14px;padding:26px;transition:border-color .2s,transform .2s}
+  .pillar:hover{border-color:var(--line2);transform:translateY(-3px)}
+  .pillar .pi{flex:0 0 auto;width:46px;height:46px;border-radius:11px;background:rgba(91,140,255,.13);display:flex;align-items:center;justify-content:center}
+  .pillar h3{font-size:1.1rem;color:#fff;margin-bottom:5px}
+  .pillar p{color:var(--muted);font-size:.94rem}
+
+  .steps{display:grid;gap:24px;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));counter-reset:s}
+  .step{background:linear-gradient(180deg,var(--panel),var(--panel2));border:1px solid var(--line);border-radius:var(--r);padding:34px 32px;position:relative;overflow:hidden}
+  .step::before{counter-increment:s;content:"0" counter(s);position:absolute;top:20px;right:26px;font-family:'Space Grotesk';font-weight:700;font-size:2.2rem;background:var(--grad);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;opacity:.4}
+  .step .si{width:48px;height:48px;border-radius:12px;background:rgba(46,230,201,.1);display:flex;align-items:center;justify-content:center;margin-bottom:16px}
+  .step h3{font-size:1.2rem;color:#fff;margin-bottom:9px}
+  .step p{color:var(--muted);font-size:.96rem}
+
+  /* Team */
+  .team{background:var(--bg2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .team-grid{display:grid;gap:22px;grid-template-columns:repeat(auto-fit,minmax(195px,1fr))}
+  .tm{background:linear-gradient(180deg,var(--panel),var(--panel2));border:1px solid var(--line);border-radius:var(--r);padding:28px 22px;text-align:center;transition:border-color .25s,transform .2s,box-shadow .25s}
+  .tm:hover{border-color:var(--line2);transform:translateY(-5px);box-shadow:var(--shadow)}
+  .tm .ph{width:118px;height:118px;border-radius:50%;margin:0 auto 18px;padding:3px;background:var(--grad)}
+  .tm .ph img{width:100%;height:100%;border-radius:50%;object-fit:cover;background:var(--panel2)}
+  .tm h3{font-size:1.12rem;color:#fff;margin-bottom:5px}
+  .tm .role{color:var(--acc);font-size:.83rem;font-weight:600;line-height:1.4}
+
+  .quote{position:relative;overflow:hidden;border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:var(--bg)}
+  .quote::before{content:"";position:absolute;inset:0;background:radial-gradient(800px 400px at 50% -30%,rgba(46,230,201,.13),transparent 65%);pointer-events:none}
+  .quote .wrap{position:relative;z-index:1;max-width:900px;text-align:center}
+  .quote p{font-family:'Space Grotesk';font-weight:600;font-size:clamp(1.5rem,3.4vw,2.25rem);line-height:1.3;color:#fff;letter-spacing:-.02em}
+  .quote p .g{background:var(--grad);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+  .quote .by{margin-top:22px;color:var(--muted);font-weight:600;font-size:.95rem}
+
+  .cta-sec{position:relative;overflow:hidden}
+  .cta-sec::before{content:"";position:absolute;inset:0;background:radial-gradient(760px 420px at 50% 0%,rgba(91,140,255,.15),transparent 64%);pointer-events:none}
+  .cta-inner{position:relative;z-index:1;display:grid;gap:48px;grid-template-columns:1fr;align-items:center;max-width:1040px;margin:0 auto}
+  @media(min-width:880px){.cta-inner{grid-template-columns:1.02fr .98fr}}
+  .cta-inner h2{font-size:clamp(1.9rem,3.5vw,2.5rem);color:#fff;margin-bottom:16px}
+  .cta-inner .lead{color:var(--soft);font-size:1.1rem;margin-bottom:24px}
+  .cta-inner ul{list-style:none;display:grid;gap:14px}
+  .cta-inner li{display:flex;gap:12px;align-items:flex-start;color:var(--soft);font-weight:500}
+  .cta-inner li svg{stroke:var(--acc);flex:0 0 auto;margin-top:3px}
+  form{background:linear-gradient(180deg,var(--panel),var(--panel2));border:1px solid var(--line2);border-radius:18px;padding:34px;box-shadow:var(--shadow)}
+  form h3{color:#fff;font-size:1.25rem;margin-bottom:4px}
+  form .fsub{color:var(--muted);font-size:.92rem;margin-bottom:18px}
+  label{display:block;font-weight:600;font-size:.84rem;margin:14px 0 6px;color:var(--soft)}
+  input,textarea{width:100%;padding:13px 15px;border:1px solid var(--line2);border-radius:10px;font-size:1rem;font-family:inherit;background:#070d1a;color:var(--text);transition:border-color .2s,box-shadow .2s}
+  input::placeholder,textarea::placeholder{color:#566685}
+  input:focus,textarea:focus{outline:none;border-color:var(--acc);box-shadow:0 0 0 3px rgba(46,230,201,.14)}
+  form .btn{width:100%;margin-top:20px;justify-content:center}
+  .fnote{text-align:center;font-size:.8rem;color:var(--muted);margin-top:13px}
+  .form-ok{display:none;text-align:center;padding:26px 8px}
+  .form-ok.show{display:block}
+  .form-ok .chk{width:60px;height:60px;border-radius:50%;background:rgba(46,230,201,.12);border:1px solid rgba(46,230,201,.4);display:flex;align-items:center;justify-content:center;margin:0 auto 16px}
+  .form-ok h3{font-size:1.3rem;margin-bottom:8px}
+  .form-ok p{color:var(--muted);font-size:.96rem}
+
+  footer{border-top:1px solid var(--line);padding:54px 0 38px;background:var(--bg2)}
+  .foot{display:flex;justify-content:space-between;gap:28px;flex-wrap:wrap;align-items:flex-start}
+  .foot .logo img{height:46px}
+  .foot .fnav{display:flex;gap:26px;flex-wrap:wrap;color:var(--muted);font-weight:500;font-size:.92rem}
+  .foot .fnav a:hover{color:var(--acc)}
+  .copy{color:var(--faint);font-size:.84rem;margin-top:26px;border-top:1px solid var(--line);padding-top:22px;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+  .copy a{color:var(--muted)}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="bar">
+    <a class="logo" href="#top"><img src="img/logo-white.webp" alt="Cinnamon Bay Advisors, LLC" /></a>
+    <nav class="nav-links">
+      <a href="#serve">Who We Serve</a>
+      <a href="#why">Why CBA</a>
+      <a href="#how">How We Work</a>
+      <a href="#team">Team</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <a class="btn" href="#contact">Start the conversation</a>
+    <button class="menu-btn" id="menuBtn" aria-label="Menu"><span></span><span></span><span></span></button>
+  </div>
+  <div class="mobnav" id="mobnav">
+    <a href="#serve">Who We Serve</a>
+    <a href="#why">Why CBA</a>
+    <a href="#how">How We Work</a>
+    <a href="#team">Team</a>
+    <a href="#contact">Contact</a>
+    <a class="btn" href="#contact">Start the conversation</a>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero" id="top">
+  <div class="circ"></div>
+  <div class="inner">
+    <span class="pill reveal"><span class="dot"></span> Empowering Cybersecurity Innovators</span>
+    <h1 class="reveal">Strategic advisory for the <span class="g">cybersecurity ecosystem</span>.</h1>
+    <p class="sub reveal">At Cinnamon Bay Advisors, LLC, we provide comprehensive advisory services tailored specifically for the cybersecurity landscape. With a nuanced understanding of the industry's challenges and opportunities, we offer strategic guidance and support to three key stakeholders — cybersecurity startups, venture capital groups, and consulting firms looking to forge partnerships with cybersecurity vendors.</p>
+    <div class="cta reveal">
+      <a class="btn" href="#contact">Let's collaborate →</a>
+      <a class="btn btn-ghost" href="#serve">How we help</a>
+    </div>
+    <div class="serves reveal">
+      <span><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Cybersecurity Startups</span>
+      <span><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Venture Capital Groups</span>
+      <span><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Consulting Firms</span>
+    </div>
+  </div>
+</section>
+
+<!-- WHO WE SERVE -->
+<section id="serve">
+  <div class="wrap">
+    <div class="head reveal">
+      <span class="eyebrow">Who We Serve</span>
+      <h2>Built for the people building cybersecurity</h2>
+      <p>Three key stakeholders, one mission — advancing the industry through the right connections and counsel.</p>
+    </div>
+    <div class="grid">
+      <div class="card reveal">
+        <div class="ic"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#2ee6c9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 3 14h9l-1 8 10-12h-9z"/></svg></div>
+        <h3>Cybersecurity Startups</h3>
+        <p>Critical access to networks, potential investors, strategic partnerships, and advanced resources to fuel innovation, create differentiation, and drive rapid growth.</p>
+      </div>
+      <div class="card reveal">
+        <div class="ic"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#2ee6c9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="m7 14 4-4 3 3 5-6"/></svg></div>
+        <h3>Venture Capital</h3>
+        <p>Enhanced deal flow, due diligence support, portfolio assistance, market insights, and strategic advisory services ensuring optimized portfolio performance and collaborative success.</p>
+      </div>
+      <div class="card reveal">
+        <div class="ic"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#2ee6c9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="7" r="3"/><circle cx="17" cy="9" r="2.5"/><path d="M3 20c0-3 3-5 6-5s6 2 6 5"/><path d="M15.5 20c0-2 .8-3.4 2.5-3.4S20.5 18 20.5 20"/></svg></div>
+        <h3>Consulting Firms</h3>
+        <p>Facilitation of meaningful partnerships between larger consulting firms and cutting-edge cybersecurity vendors, fostering mutually beneficial alliances and innovative partnerships.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY -->
+<section id="why" class="why">
+  <div class="wrap">
+    <div class="head reveal">
+      <span class="eyebrow">Why Cinnamon Bay</span>
+      <h2>Access, judgment, and a network that opens doors</h2>
+    </div>
+    <div class="pgrid">
+      <div class="pillar reveal">
+        <div class="pi"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#5b8cff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg></div>
+        <div><h3>Expertise</h3><p>Our team is comprised of seasoned professionals with a deep understanding of the cybersecurity domain.</p></div>
+      </div>
+      <div class="pillar reveal">
+        <div class="pi"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#5b8cff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="4"/></svg></div>
+        <div><h3>Strategic Guidance</h3><p>Partner with us to navigate the complexities of cybersecurity startup growth and forge powerful alliances that drive mutual success.</p></div>
+      </div>
+      <div class="pillar reveal">
+        <div class="pi"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#5b8cff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a4 4 0 0 0-5.4 5.4L3 18l3 3 6.3-6.3a4 4 0 0 0 5.4-5.4l-2.6 2.6-2-2 2.6-2.6z"/></svg></div>
+        <div><h3>Tailored Approach</h3><p>We offer customized solutions that align with the unique goals and challenges of each client.</p></div>
+      </div>
+      <div class="pillar reveal">
+        <div class="pi"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#5b8cff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="6" r="2.5"/><circle cx="18" cy="6" r="2.5"/><circle cx="12" cy="18" r="2.5"/><path d="M7.5 7.8 11 16M16.5 7.8 13 16M8 6h8"/></svg></div>
+        <div><h3>Industry Access</h3><p>Our extensive network provides unparalleled access to key industry players, fostering opportunities for growth and collaboration.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HOW WE WORK -->
+<section id="how">
+  <div class="wrap">
+    <div class="head reveal">
+      <span class="eyebrow">How We Work</span>
+      <h2>A clear path from introduction to impact</h2>
+    </div>
+    <div class="steps">
+      <div class="step reveal">
+        <div class="si"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#2ee6c9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg></div>
+        <h3>Understand</h3>
+        <p>We start with your goals, your market position, and where the right access or counsel will create the most leverage.</p>
+      </div>
+      <div class="step reveal">
+        <div class="si"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#2ee6c9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="12" r="2.5"/><circle cx="18" cy="6" r="2.5"/><circle cx="18" cy="18" r="2.5"/><path d="M8.2 10.8 15.8 7M8.2 13.2 15.8 17"/></svg></div>
+        <h3>Connect</h3>
+        <p>We open the right doors — investors, partners, vendors, decision-makers — and facilitate the introductions that matter.</p>
+      </div>
+      <div class="step reveal">
+        <div class="si"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#2ee6c9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17l5-5 4 4 8-9"/><path d="M21 7v5h-5"/></svg></div>
+        <h3>Grow</h3>
+        <p>We stay engaged through execution — advising, refining, and supporting the partnerships and deals as they take shape.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TEAM -->
+<section id="team" class="team">
+  <div class="wrap">
+    <div class="head reveal">
+      <span class="eyebrow">The Team</span>
+      <h2>The people behind Cinnamon Bay</h2>
+      <p>We are committed to driving innovation, growth, and collaboration within the cybersecurity industry.</p>
+    </div>
+    <div class="team-grid">
+      <div class="tm reveal">
+        <div class="ph"><img src="img/team-dale.webp" alt="Dale Miller" loading="lazy" /></div>
+        <h3>Dale Miller</h3>
+        <div class="role">Founder &amp; CEO</div>
+      </div>
+      <div class="tm reveal">
+        <div class="ph"><img src="img/team-richard.webp" alt="Richard Toohey" loading="lazy" /></div>
+        <h3>Richard Toohey</h3>
+        <div class="role">Director of Analytics &amp; Quantum Technologies</div>
+      </div>
+      <div class="tm reveal">
+        <div class="ph"><img src="img/team-geraldine.webp" alt="Geraldine Anello" loading="lazy" /></div>
+        <h3>Geraldine Anello</h3>
+        <div class="role">Director of Operations &amp; Marketing</div>
+      </div>
+      <div class="tm reveal">
+        <div class="ph"><img src="img/team-shannon.webp" alt="Shannon B. Hill" loading="lazy" /></div>
+        <h3>Shannon B. Hill</h3>
+        <div class="role">Director, Cybersecurity Solutions &amp; Architecture</div>
+      </div>
+      <div class="tm reveal">
+        <div class="ph"><img src="img/team-thomas.webp" alt="Thomas Gilheany" loading="lazy" /></div>
+        <h3>Thomas Gilheany</h3>
+        <div class="role">Director, Cybersecurity for AI &amp; Emerging Tech</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- QUOTE BAND -->
+<section class="quote">
+  <div class="wrap reveal">
+    <p>We are committed to driving <span class="g">innovation, growth, and collaboration</span> within the cybersecurity industry.</p>
+    <div class="by">— Cinnamon Bay Advisors, LLC</div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="cta-sec">
+  <div class="wrap cta-inner">
+    <div class="reveal">
+      <span class="eyebrow">Let's Talk</span>
+      <h2>Let's collaborate and secure the future together.</h2>
+      <p class="lead">Partner with us to navigate the complexities of cybersecurity growth and forge powerful alliances that drive mutual success. Tell us about your firm and what you're working toward.</p>
+      <ul>
+        <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> A direct line to deep cybersecurity industry access</li>
+        <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Senior, tailored advisory — never off-the-shelf</li>
+        <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Partnerships and introductions that actually convert</li>
+      </ul>
+    </div>
+
+    <div class="reveal">
+      <form id="cbaForm" action="https://forms.stricklysoft.workers.dev/cinnamon-bay-advisors" method="POST">
+        <input type="hidden" name="_subject" value="New inquiry from Cinnamon Bay Advisors website" />
+        <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off" />
+        <h3>Start the conversation</h3>
+        <p class="fsub">We'll respond within one business day.</p>
+        <label for="company">Company</label>
+        <input type="text" id="company" name="company" placeholder="Your company" />
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" placeholder="Your name" required />
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" placeholder="you@company.com" required />
+        <label for="message">How can we help?</label>
+        <textarea id="message" name="message" rows="3" placeholder="Tell us a bit about your firm and your goals..."></textarea>
+        <button type="submit" class="btn">Send Message →</button>
+        <div class="fnote">We respect your privacy. Your details are never shared.</div>
+      </form>
+      <div class="form-ok" id="formOk">
+        <div class="chk"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#2ee6c9" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+        <h3>Thank you — message sent.</h3>
+        <p>We've received your note and will be in touch within one business day.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="foot">
+      <a class="logo" href="#top"><img src="img/logo-white.webp" alt="Cinnamon Bay Advisors, LLC" /></a>
+      <div class="fnav">
+        <a href="#serve">Who We Serve</a>
+        <a href="#why">Why CBA</a>
+        <a href="#how">How We Work</a>
+        <a href="#team">Team</a>
+        <a href="#contact">Contact</a>
+        <a href="privacy.html">Privacy</a>
+        <a href="terms.html">Terms</a>
+      </div>
+    </div>
+    <div class="copy">
+      <span>© 2026 Cinnamon Bay Advisors, LLC. All rights reserved.</span>
+      <span><a href="privacy.html">Privacy Policy</a> &nbsp;·&nbsp; <a href="terms.html">Terms of Use</a></span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  var mb=document.getElementById('menuBtn'), mn=document.getElementById('mobnav');
+  mb.addEventListener('click',function(){mb.classList.toggle('x');mn.classList.toggle('open');});
+  mn.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){mb.classList.remove('x');mn.classList.remove('open');});});
+
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{threshold:.12});
+  document.querySelectorAll('.reveal').forEach(function(el){io.observe(el);});
+
+  var f=document.getElementById('cbaForm'), ok=document.getElementById('formOk');
+  f.addEventListener('submit',function(ev){
+    ev.preventDefault();
+    var btn=f.querySelector('button'); btn.textContent='Sending…'; btn.disabled=true;
+    fetch(f.action,{method:'POST',headers:{'Accept':'application/json'},body:new FormData(f)})
+      .then(function(r){return r.json().catch(function(){return{};});})
+      .then(function(){ f.style.display='none'; ok.classList.add('show'); })
+      .catch(function(){ btn.textContent='Send Message →'; btn.disabled=false; alert('Something went wrong — please email us directly.'); });
+  });
+</script>
+</body>
+</html>

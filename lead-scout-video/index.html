@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>StricklySoft Lead Scout — explainer</title>
+<style>
+  :root{--charcoal:#0D1117;--emerald:#10B981;--emerald2:#34D399;--white:#F8FAFC;--gray:#9fb0c6;--border:#334155}
+  *{box-sizing:border-box;margin:0;padding:0}
+  html,body{width:100%;height:100%;overflow:hidden;background:var(--charcoal);
+    font-family:system-ui,-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;color:var(--white)}
+  .stage{position:fixed;inset:0;cursor:pointer;background:var(--charcoal)}
+  .scene{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;
+    text-align:center;padding:6vh 8vw;opacity:0;visibility:hidden;transition:opacity .5s ease;--ac:#34D399}
+  .scene::before{content:"";position:absolute;inset:0;z-index:0;pointer-events:none;opacity:.55;
+    background:radial-gradient(55vw 36vh at 50% -8%, color-mix(in srgb, var(--ac) 32%, transparent), transparent 60%),
+               radial-gradient(50vw 34vh at 50% 118%, color-mix(in srgb, var(--ac) 22%, transparent), transparent 60%)}
+  .scene>*{position:relative;z-index:1}
+  .scene.active{opacity:1;visibility:visible}
+  h2{font-size:clamp(28px,4.6vw,52px);font-weight:800;letter-spacing:-.02em;max-width:20em;line-height:1.08}
+  p{color:var(--gray);font-size:clamp(16px,2.1vw,25px);max-width:24em;margin-top:2vh}
+  .accent{color:var(--ac)}
+  .kicker{font-size:clamp(12px,1.4vw,16px);font-weight:800;letter-spacing:.22em;text-transform:uppercase;color:var(--ac);margin-bottom:2.2vh}
+  .a{opacity:0;transform:translateY(20px)}
+  .scene.active .a{opacity:1;transform:none;transition:opacity .55s ease,transform .55s ease}
+  .scene.active .a:nth-child(2){transition-delay:.1s}.scene.active .a:nth-child(3){transition-delay:.22s}.scene.active .a:nth-child(4){transition-delay:.34s}
+  .mark{width:12vh;height:12vh;margin-bottom:2vh;filter:drop-shadow(0 0 28px rgba(16,185,129,.55))}
+  .stores{display:flex;flex-wrap:wrap;gap:1.2vh 1vw;justify-content:center;margin-top:3vh;max-width:44em}
+  .chip{padding:1.1vh 1.4vw;border-radius:99px;font-size:clamp(13px,1.5vw,18px);font-weight:700;opacity:0;transform:scale(.85);
+    border:1px solid color-mix(in srgb,var(--c) 55%,transparent);background:color-mix(in srgb,var(--c) 14%,transparent);color:#fff}
+  .chip b{color:var(--c)}
+  .scene.active .chip{opacity:1;transform:none;transition:opacity .45s ease,transform .45s ease}
+  .scene.active .chip:nth-child(1){transition-delay:.18s}.scene.active .chip:nth-child(2){transition-delay:.3s}.scene.active .chip:nth-child(3){transition-delay:.42s}
+  .scene.active .chip:nth-child(4){transition-delay:.54s}.scene.active .chip:nth-child(5){transition-delay:.66s}.scene.active .chip:nth-child(6){transition-delay:.78s}
+  .flow{display:flex;align-items:center;gap:1vw;justify-content:center;flex-wrap:wrap;margin-top:3.5vh}
+  .node{padding:1.3vh 1.5vw;border-radius:12px;font-size:clamp(13px,1.5vw,18px);font-weight:700;opacity:0;transform:translateY(12px);
+    border:1px solid color-mix(in srgb,var(--c) 55%,transparent);background:color-mix(in srgb,var(--c) 12%,transparent)}
+  .scene.active .node{opacity:1;transform:none;transition:opacity .5s ease,transform .5s ease}
+  .scene.active .node:nth-child(1){transition-delay:.15s}.scene.active .node:nth-child(3){transition-delay:.55s}.scene.active .node:nth-child(5){transition-delay:.95s}
+  .arrow{color:var(--ac);font-weight:800;font-size:clamp(16px,2vw,24px);opacity:0}
+  .scene.active .arrow{opacity:1;transition:opacity .5s ease}
+  .scene.active .arrow:nth-child(2){transition-delay:.38s}.scene.active .arrow:nth-child(4){transition-delay:.78s}
+  .prices{display:flex;gap:1.6vw;justify-content:center;flex-wrap:wrap;margin-top:3vh}
+  .pc{width:13em;max-width:34vw;padding:2.6vh 1.4vw;border-radius:16px;opacity:0;transform:translateY(16px);
+    border:1px solid color-mix(in srgb,var(--c) 55%,transparent);background:color-mix(in srgb,var(--c) 12%,transparent)}
+  .scene.active .pc{opacity:1;transform:none;transition:opacity .55s ease,transform .55s ease}
+  .scene.active .pc:nth-child(1){transition-delay:.18s}.scene.active .pc:nth-child(2){transition-delay:.34s}.scene.active .pc:nth-child(3){transition-delay:.5s}
+  .pc .amt{font-size:clamp(26px,3.4vw,40px);font-weight:800;color:var(--c);letter-spacing:-.02em}
+  .pc .lab{font-size:clamp(13px,1.5vw,18px);color:var(--gray);margin-top:.6vh;font-weight:600}
+  .twocard{display:flex;gap:1.6vw;justify-content:center;flex-wrap:wrap;margin-top:3vh}
+  .pcard{width:18em;max-width:40vw;padding:2.4vh 1.6vw;border-radius:14px;
+    border:1px solid color-mix(in srgb,var(--c) 50%,transparent);background:color-mix(in srgb,var(--c) 10%,transparent)}
+  .pcard h3{font-size:clamp(16px,1.9vw,24px);font-weight:700;color:var(--c)}
+  .pcard p{font-size:clamp(13px,1.5vw,18px);margin-top:1vh}
+  .big{font-size:clamp(22px,3vw,34px);font-weight:800;margin-top:3vh}
+  .free{display:inline-block;margin-top:2.4vh;padding:1.2vh 1.8vw;border-radius:99px;font-weight:800;font-size:clamp(15px,1.9vw,22px);
+    border:1px solid var(--ac);background:color-mix(in srgb,var(--ac) 16%,transparent);color:var(--ac)}
+  @media(prefers-reduced-motion:reduce){.a,.chip,.node,.arrow,.pc{opacity:1!important;transform:none!important}}
+</style>
+</head>
+<body>
+<div class="stage" id="stage" title="click to replay">
+  <div class="scene" style="--ac:#34D399">
+    <svg class="mark a" viewBox="0 0 32 32"><rect width="32" height="32" rx="7" fill="#161B22"/><path d="M9 22V10M9 22h8" stroke="#10B981" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"/><circle cx="22" cy="11" r="2.6" fill="#34D399"/></svg>
+    <h2 class="a">Never run out of <span class="accent">leads</span>.</h2>
+    <p class="a">Fresh, verified sales leads — delivered to your inbox every week. By StricklySoft.</p>
+  </div>
+  <div class="scene" style="--ac:#FB7185">
+    <span class="kicker a">The problem</span>
+    <h2 class="a">Prospecting is the work nobody has time for.</h2>
+    <div class="twocard a">
+      <div class="pcard" style="--c:#FB7185"><h3>Scattered everywhere</h3><p>New prospects hide across event calendars, listings, and local sources.</p></div>
+      <div class="pcard" style="--c:#FBBF24"><h3>Lists full of dead ends</h3><p>Bought lists are stale and padded — you burn calls on numbers that don't work.</p></div>
+    </div>
+  </div>
+  <div class="scene" style="--ac:#38BDF8">
+    <span class="kicker a">How it works</span>
+    <h2 class="a">A fresh list, every week — automatically.</h2>
+    <div class="flow">
+      <span class="node" style="--c:#38BDF8">Discover prospects</span><span class="arrow">→</span>
+      <span class="node" style="--c:#A78BFA">Verify every contact</span><span class="arrow">→</span>
+      <span class="node" style="--c:#34D399">Straight to your inbox</span>
+    </div>
+  </div>
+  <div class="scene" style="--ac:#A78BFA">
+    <span class="kicker a">Why it's different</span>
+    <h2 class="a">Verified, not scraped.</h2>
+    <div class="twocard a">
+      <div class="pcard" style="--c:#34D399"><h3>Confirmed at the source</h3><p>A contact ships only if its phone or email appears on the source itself — no invented numbers.</p></div>
+      <div class="pcard" style="--c:#A78BFA"><h3>Never a duplicate</h3><p>Checked against everything you've already received. You never pitch the same prospect twice.</p></div>
+    </div>
+  </div>
+  <div class="scene" style="--ac:#22D3EE">
+    <span class="kicker a">Built right</span>
+    <h2 class="a">Runs on our own <span class="accent">private</span> AI platform.</h2>
+    <p class="a">Your market intelligence stays yours — not a third party's. No new app to learn; the leads just show up where you already work.</p>
+  </div>
+  <div class="scene" style="--ac:#FBBF24">
+    <span class="kicker a">Simple pricing</span>
+    <h2 class="a">One flat rate.</h2>
+    <div class="prices">
+      <div class="pc" style="--c:#34D399"><div class="amt">$49</div><div class="lab">per month</div></div>
+      <div class="pc" style="--c:#38BDF8"><div class="amt">$490</div><div class="lab">per year — 2 months free</div></div>
+    </div>
+    <span class="free a">Cancel anytime — your first sample is free.</span>
+  </div>
+  <div class="scene" style="--ac:#34D399">
+    <h2 class="a">Spend your time <span class="accent">closing</span>, not hunting.</h2>
+    <p class="big a">Get Lead Scout today.</p>
+    <p class="a">StricklySoft · stricklysoft.com/lead-scout</p>
+  </div>
+</div>
+<script>
+  var scenes = Array.prototype.slice.call(document.querySelectorAll('.scene'));
+  var DUR = 7000, i = 0, t = null;
+  function run(){
+    clearInterval(t); scenes.forEach(function(s){s.classList.remove('active');});
+    i = 0; scenes[0].classList.add('active');
+    t = setInterval(function(){
+      scenes[i].classList.remove('active'); i++;
+      if(i >= scenes.length){ clearInterval(t); scenes[scenes.length-1].classList.add('active'); return; }
+      scenes[i].classList.add('active');
+    }, DUR);
+  }
+  document.getElementById('stage').addEventListener('click', run);
+  run();
+</script>
+</body>
+</html>
